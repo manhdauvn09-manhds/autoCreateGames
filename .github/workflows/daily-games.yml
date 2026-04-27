@@ -30,6 +30,8 @@ jobs:
 
       - name: Generate Daily Games
         run: node scripts/generate-games.js
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
       - name: Commit and Push
         run: |

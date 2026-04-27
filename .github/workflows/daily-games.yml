@@ -1,0 +1,43 @@
+name: Daily GenZ Games Generator
+
+on:
+  schedule:
+    # Chạy hàng ngày lúc 0h sáng (UTC)
+    - cron: '0 0 * * *'
+  # Cho phép chạy manual từ GitHub UI
+  workflow_dispatch:
+
+jobs:
+  generate-games:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "claude-genz-bot@anthropic.com"
+          git config --global user.name "GenZ Games Bot"
+
+      - name: Generate Daily Games
+        run: node scripts/generate-games.js
+
+      - name: Commit and Push
+        run: |
+          git add .
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "daily-genz-games: $(date +%Y-%m-%d) – generated 10 games"
+            git push origin $(git rev-parse --abbrev-ref HEAD)
+          else
+            echo "No changes to commit"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

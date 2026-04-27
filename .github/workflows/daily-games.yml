@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -35,7 +36,7 @@ jobs:
           git add .
           if ! git diff-index --quiet HEAD; then
             git commit -m "daily-genz-games: $(date +%Y-%m-%d) – generated 10 games"
-            git push origin $(git rev-parse --abbrev-ref HEAD)
+            git push origin main
           else
             echo "No changes to commit"
           fi

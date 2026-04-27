@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastLetters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="header">
+      <div id="score">Score: 0</div>
+      <div id="timer">⏱️ Time: 60s</div>
+      <div id="health">❤️ Lives: 3</div>
+    </div>
+
+    <div id="letters-display">
+      <div id="current-word"></div>
+      <div id="letters-pool"></div>
+    </div>
+
+    <div id="input-zone">
+      <input type="text" id="word-input" placeholder="Type words..." autofocus>
+      <button id="submit-btn">Submit</button>
+    </div>
+
+    <div id="feedback-zone">
+      <div id="feedback"></div>
+    </div>
+
+    <div id="tutorial">
+      <h2>FastLetters ✨</h2>
+      <p>Make words from the letters shown!</p>
+      <p>Faster = More points. ⏱️ Ready?</p>
+      <button id="start-btn">Start Game</button>
+    </div>
+
+    <div id="game-over-screen" class="hidden">
+      <div class="over-panel">
+        <h2>Game Over!</h2>
+        <p id="final-score"></p>
+        <button id="restart-btn">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

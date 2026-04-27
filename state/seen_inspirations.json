@@ -1,0 +1,82 @@
+[
+  {
+    "id": "friday_night_funkin_crazygames_2026-04-27",
+    "title": "Friday Night Funkin'",
+    "source": "crazygames.com",
+    "date_seen": "2026-04-27",
+    "genre": ["rhythm", "music"],
+    "theme_keywords": ["rap", "battle", "music"]
+  },
+  {
+    "id": "wordle_various_2026-04-27",
+    "title": "Wordle",
+    "source": "web-trending",
+    "date_seen": "2026-04-27",
+    "genre": ["puzzle", "word-game"],
+    "theme_keywords": ["words", "daily-challenge"]
+  },
+  {
+    "id": "geometry_dash_crazygames_2026-04-27",
+    "title": "Geometry Dash",
+    "source": "crazygames.com",
+    "date_seen": "2026-04-27",
+    "genre": ["action", "platformer", "rhythm"],
+    "theme_keywords": ["arcade", "jumping", "neon"]
+  },
+  {
+    "id": "flappy_bird_various_2026-04-27",
+    "title": "Flappy Bird Clones",
+    "source": "web-trending",
+    "date_seen": "2026-04-27",
+    "genre": ["action", "endless-runner"],
+    "theme_keywords": ["one-button", "tap-to-fly"]
+  },
+  {
+    "id": "moto_x3m_parkour_2026-04-27",
+    "title": "Moto X3M / Physics Parkour",
+    "source": "web-trending",
+    "date_seen": "2026-04-27",
+    "genre": ["action", "physics", "racing"],
+    "theme_keywords": ["stunts", "tricks", "physics"]
+  },
+  {
+    "id": "cookie_clicker_itch_2026-04-27",
+    "title": "Cookie Clicker",
+    "source": "itch.io",
+    "date_seen": "2026-04-27",
+    "genre": ["idle", "clicker", "incremental"],
+    "theme_keywords": ["click", "upgrades", "passive-income"]
+  },
+  {
+    "id": "suika_game_merge_2026-04-27",
+    "title": "Suika Game / Merge Games",
+    "source": "web-trending",
+    "date_seen": "2026-04-27",
+    "genre": ["puzzle", "merge"],
+    "theme_keywords": ["satisfying", "progression", "merge"]
+  },
+  {
+    "id": "match_3_games_crazygames_2026-04-27",
+    "title": "Match-3 Puzzle Games",
+    "source": "crazygames.com",
+    "date_seen": "2026-04-27",
+    "genre": ["puzzle"],
+    "theme_keywords": ["gems", "matching", "combo"]
+  },
+  {
+    "id": "slay_the_spire_indie_2026-04-27",
+    "title": "Slay the Spire",
+    "source": "indie-games",
+    "date_seen": "2026-04-27",
+    "genre": ["strategy", "card-game", "roguelike"],
+    "theme_keywords": ["cards", "deck-building", "strategy"]
+  },
+  {
+    "id": "tower_defense_games_2026-04-27",
+    "title": "Tower Defense / Wave Games",
+    "source": "web-trending",
+    "date_seen": "2026-04-27",
+    "genre": ["strategy", "action"],
+    "theme_keywords": ["defense", "waves", "towers"]
+  }
+]

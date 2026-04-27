@@ -1,0 +1,15 @@
+{
+  "id": "20260427_fastletters",
+  "title": "FastLetters",
+  "tagline": "Type words from the letters! Speed and creativity = high scores.",
+  "date": "2026-04-27",
+  "inspiration": "Wordle meets real-time word puzzle (timed challenge variant)",
+  "genre": ["puzzle", "word-game", "timed"],
+  "core_loop_verbs": ["type", "submit", "create"],
+  "mechanics": ["word validation", "letter matching", "combo scoring"],
+  "input": ["keyboard"],
+  "session_length_sec": 60,
+  "camera": "ui-only",
+  "theme_keywords": ["neon", "fast-paced", "word-game"],
+  "features": ["word validation", "timer", "lives system", "scoring"]
+}

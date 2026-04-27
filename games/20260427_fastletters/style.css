@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+#game-container {
+  width: 100%;
+  max-width: 500px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  color: white;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+}
+
+#letters-display {
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(0,255,136,0.2);
+}
+
+#current-word {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  min-height: 1.2em;
+  color: #00ff88;
+  text-shadow: 0 0 20px #00ff88;
+  letter-spacing: 5px;
+}
+
+#letters-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.letter {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: 2px solid #00ff88;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.letter:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+.letter.selected {
+  background: #00ff88;
+  color: #000;
+  box-shadow: 0 0 20px #00ff88;
+}
+
+#input-zone {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#word-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #00ff88;
+  border-radius: 8px;
+  background: rgba(0,255,136,0.1);
+  color: white;
+  font-size: 1.1em;
+  outline: none;
+  transition: all 0.3s;
+}
+
+#word-input:focus {
+  box-shadow: 0 0 20px #00ff88;
+  background: rgba(0,255,136,0.2);
+}
+
+#submit-btn {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #00ff88, #00cc66);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ff88;
+}
+
+#feedback-zone {
+  min-height: 40px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#feedback {
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+  animation: popUp 0.5s ease-out;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+#tutorial, #game-over-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#tutorial.hidden, #game-over-screen.hidden {
+  display: none;
+}
+
+#tutorial > h2, #tutorial > p, .over-panel > h2, .over-panel > p {
+  margin-bottom: 20px;
+}
+
+#tutorial {
+  flex-direction: column;
+  text-align: center;
+  color: #00ff88;
+  text-shadow: 0 0 20px #00ff88;
+}
+
+#tutorial h2 {
+  font-size: 2.5em;
+}
+
+#tutorial p {
+  font-size: 1.1em;
+}
+
+#start-btn, #restart-btn {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: 2px solid #00ff88;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#start-btn:hover, #restart-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ff88;
+}
+
+.over-panel {
+  background: rgba(20,30,48,0.95);
+  border: 2px solid #00ff88;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  color: #00ff88;
+}
+
+.over-panel h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.over-panel p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}

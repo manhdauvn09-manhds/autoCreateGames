@@ -1,0 +1,15 @@
+{
+  "id": "20260427_beatjump",
+  "title": "BeatJump",
+  "tagline": "Tap to jump on the rhythm! Dodge platforms and maintain your combo.",
+  "date": "2026-04-27",
+  "inspiration": "Friday Night Funkin' + Geometry Dash (rhythm-synced platformer)",
+  "genre": ["rhythm", "platformer", "action"],
+  "core_loop_verbs": ["tap", "jump", "dodge", "combo"],
+  "mechanics": ["timing-based jumping", "combo meter", "difficulty curve"],
+  "input": ["tap", "spacebar", "arrow keys"],
+  "session_length_sec": 120,
+  "camera": "vertical-scrolling",
+  "theme_keywords": ["neon", "arcade", "fast-paced"],
+  "features": ["combo system", "pause menu", "sound toggle", "mobile-responsive"]
+}

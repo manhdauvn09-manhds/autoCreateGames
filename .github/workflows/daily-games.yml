@@ -43,14 +43,21 @@ jobs:
         run: docker build -t genz-minigames:latest .
 
       - name: Deploy to Server
-        run: node scripts/deploy.js
+        run: |
+          # Make deploy script executable
+          chmod +x auto-deploy.sh
+
+          # Run deploy via SSH
+          sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" ssh -o StrictHostKeyChecking=no \
+            -p ${{ secrets.DEPLOY_PORT }} \
+            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} \
+            "cd /tmp && curl -s https://raw.githubusercontent.com/manhdauvn09-manhds/autoCreateGames/main/auto-deploy.sh | bash"
+        continue-on-error: true
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
-          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
           DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
           DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
-        continue-on-error: true
 
       - name: Commit and Push
         run: |

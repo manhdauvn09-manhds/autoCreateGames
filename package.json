@@ -1,0 +1,23 @@
+{
+  "name": "genz-minigames",
+  "version": "1.0.0",
+  "description": "Auto-generated GenZ minigames factory",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "generate": "node scripts/generate-games.js",
+    "docker:build": "docker build -t genz-minigames .",
+    "docker:run": "docker-compose up -d",
+    "docker:stop": "docker-compose down"
+  },
+  "keywords": ["games", "minigames", "genz"],
+  "author": "Claude",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

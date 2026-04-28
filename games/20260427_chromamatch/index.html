@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChromaMatch</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+    }
+    #game {
+      width: 100%;
+      max-width: 500px;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      color: white;
+      text-align: center;
+    }
+    h1 { color: #00ff88; text-shadow: 0 0 15px #00ff88; margin-bottom: 20px; }
+    #score { font-size: 1.5em; color: #00ff88; margin: 20px 0; }
+    button {
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: 2px solid #00ff88;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #00ff88;
+    }
+  </style>
+</head>
+<body>
+  <div id="game">
+    <h1>🎮 ChromaMatch</h1>
+    <p style="margin-bottom: 20px;">Auto-generated game - match3</p>
+    <div id="score">Score: 0</div>
+    <button onclick="startGame()">Start Game</button>
+    <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9em;">
+      Generated: 4/28/2026
+    </p>
+  </div>
+  <script>
+    let score = 0;
+    function startGame() {
+      score = Math.floor(Math.random() * 1000) + 100;
+      document.getElementById('score').textContent = 'Score: ' + score;
+      alert('Game started! Final Score: ' + score);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Simplified Dockerfile cho games (nginx only, no nodejs)
+FROM nginx:alpine
+
+WORKDIR /usr/share/nginx/html
+
+# Copy games
+COPY games/ ./games/
+COPY index.html ./
+
+# Copy custom nginx config
+COPY nginx-simple.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost/health || exit 1
